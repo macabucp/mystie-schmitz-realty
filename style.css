@@ -585,12 +585,571 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ================================================================
-   RESPONSIVE BREAKPOINTS
+   RESPONSIVE BREAKPOINTS - COMPREHENSIVE MOBILE FIRST DESIGN
+   ================================================================
+   Supports: iPhone SE, iPhone 12-15, Samsung phones, tablets, desktops
    ================================================================ */
 
-@media (max-width: 1024px) {
+/* EXTRA SMALL PHONES (320px - 374px) */
+@media (max-width: 374px) {
     .navbar-container {
-        padding: 1.25rem 2rem;
+        padding: 0.8rem 0.8rem;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+
+    .navbar-logo h1 {
+        font-size: 0.85rem;
+    }
+
+    .navbar-brokerage {
+        font-size: 0.65rem;
+    }
+
+    .navbar-menu {
+        order: 3;
+        width: 100%;
+        flex-direction: row;
+        gap: 0.4rem;
+        font-size: 0.7rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 0.5rem;
+    }
+
+    .nav-link {
+        font-size: 0.7rem;
+        padding: 0.3rem;
+    }
+
+    .cta-button {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.65rem;
+        order: 4;
+        width: 100%;
+        white-space: normal;
+    }
+
+    .hero-section {
+        height: 60vh;
+    }
+
+    .hero-overlay {
+        left: 0.5rem;
+        right: 0.5rem;
+    }
+
+    .hero-card {
+        padding: 1.2rem 1rem;
+    }
+
+    .hero-greeting {
+        font-size: 0.75rem;
+    }
+
+    .hero-headline {
+        font-size: 1.2rem;
+        line-height: 1.3;
+    }
+
+    .hero-description {
+        font-size: 0.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-cta {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.7rem;
+    }
+
+    .bio-section,
+    .properties-section,
+    .info-section {
+        padding: 2rem 0.8rem;
+    }
+
+    .bio-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .bio-image {
+        min-height: 200px;
+    }
+
+    .bio-title {
+        font-size: 1.3rem;
+    }
+
+    .bio-subtitle {
+        font-size: 0.85rem;
+    }
+
+    .bio-body {
+        font-size: 0.8rem;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .properties-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+
+    .property-image {
+        height: 180px;
+    }
+
+    .property-details {
+        padding: 1rem;
+    }
+
+    .property-location {
+        font-size: 1rem;
+    }
+
+    .property-price {
+        font-size: 0.9rem;
+    }
+
+    .property-snippet {
+        font-size: 0.8rem;
+    }
+
+    .footer {
+        padding: 1.5rem 0.8rem;
+    }
+
+    .footer h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .contact-form {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .form-input,
+    .form-submit {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.8rem;
+        width: 100%;
+    }
+
+    .contact-details {
+        padding: 1rem 0.8rem;
+        margin: 1rem 0;
+    }
+
+    .contact-details h4 {
+        font-size: 0.95rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .contact-details p {
+        font-size: 0.8rem;
+        line-height: 1.5;
+        padding: 0.4rem 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+    }
+
+    .contact-details strong {
+        width: auto;
+        min-width: auto;
+    }
+}
+
+/* SMALL PHONES (375px - 479px) - iPhone 12/13/14/15 */
+@media (min-width: 375px) and (max-width: 479px) {
+    .navbar-container {
+        padding: 1rem 1rem;
+        gap: 0.8rem;
+        flex-wrap: wrap;
+    }
+
+    .navbar-logo h1 {
+        font-size: 0.95rem;
+    }
+
+    .navbar-brokerage {
+        font-size: 0.7rem;
+    }
+
+    .navbar-menu {
+        order: 3;
+        width: 100%;
+        flex-direction: row;
+        gap: 0.5rem;
+        font-size: 0.75rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 0.5rem;
+    }
+
+    .nav-link {
+        font-size: 0.75rem;
+        padding: 0.35rem;
+    }
+
+    .cta-button {
+        padding: 0.65rem 1rem;
+        font-size: 0.72rem;
+        order: 4;
+        width: 100%;
+    }
+
+    .hero-section {
+        height: 70vh;
+    }
+
+    .hero-overlay {
+        left: 0.75rem;
+        right: 0.75rem;
+    }
+
+    .hero-card {
+        padding: 1.5rem 1.2rem;
+    }
+
+    .hero-greeting {
+        font-size: 0.8rem;
+    }
+
+    .hero-headline {
+        font-size: 1.4rem;
+        line-height: 1.3;
+    }
+
+    .hero-description {
+        font-size: 0.8rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .hero-cta {
+        padding: 0.65rem 1.4rem;
+        font-size: 0.75rem;
+    }
+
+    .bio-section,
+    .properties-section,
+    .info-section {
+        padding: 2.5rem 1rem;
+    }
+
+    .bio-container {
+        flex-direction: column;
+        gap: 1.8rem;
+    }
+
+    .bio-image {
+        min-height: 250px;
+    }
+
+    .bio-title {
+        font-size: 1.5rem;
+    }
+
+    .bio-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .bio-body {
+        font-size: 0.85rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.8rem;
+    }
+
+    .properties-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .property-image {
+        height: 220px;
+    }
+
+    .property-details {
+        padding: 1.3rem;
+    }
+
+    .property-location {
+        font-size: 1.1rem;
+    }
+
+    .property-price {
+        font-size: 1rem;
+    }
+
+    .property-snippet {
+        font-size: 0.85rem;
+    }
+
+    .footer {
+        padding: 2rem 1rem;
+    }
+
+    .footer h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-form {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .form-input,
+    .form-submit {
+        padding: 0.7rem 1rem;
+        font-size: 0.85rem;
+        width: 100%;
+    }
+
+    .contact-details {
+        padding: 1.3rem 1rem;
+        margin: 1.5rem 0 1rem 0;
+    }
+
+    .contact-details h4 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .contact-details p {
+        font-size: 0.85rem;
+        line-height: 1.6;
+        padding: 0.5rem 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
+    }
+
+    .contact-details strong {
+        width: auto;
+    }
+}
+
+/* MEDIUM PHONES & SMALL TABLETS (480px - 639px) */
+@media (min-width: 480px) and (max-width: 639px) {
+    .navbar-container {
+        padding: 1.1rem 1.2rem;
+        gap: 1rem;
+    }
+
+    .navbar-logo h1 {
+        font-size: 1.05rem;
+    }
+
+    .navbar-menu {
+        gap: 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .cta-button {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.75rem;
+    }
+
+    .hero-section {
+        height: 75vh;
+    }
+
+    .hero-overlay {
+        left: 1rem;
+        right: 1rem;
+    }
+
+    .hero-card {
+        padding: 1.8rem 1.5rem;
+    }
+
+    .hero-headline {
+        font-size: 1.6rem;
+    }
+
+    .hero-description {
+        font-size: 0.85rem;
+    }
+
+    .bio-section,
+    .properties-section,
+    .info-section {
+        padding: 3rem 1.2rem;
+    }
+
+    .section-title {
+        font-size: 1.7rem;
+    }
+
+    .properties-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .property-image {
+        height: 240px;
+    }
+
+    .contact-form {
+        flex-direction: column;
+    }
+
+    .form-input,
+    .form-submit {
+        width: 100%;
+    }
+
+    .contact-details p {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .contact-details strong {
+        width: 120px;
+    }
+}
+
+/* TABLETS - PORTRAIT (640px - 767px) */
+@media (min-width: 640px) and (max-width: 767px) {
+    .navbar-container {
+        padding: 1.2rem 1.5rem;
+    }
+
+    .navbar-logo h1 {
+        font-size: 1.1rem;
+    }
+
+    .navbar-menu {
+        gap: 1rem;
+    }
+
+    .cta-button {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.8rem;
+    }
+
+    .hero-section {
+        height: 80vh;
+    }
+
+    .hero-overlay {
+        left: 1.5rem;
+        right: 1.5rem;
+    }
+
+    .hero-card {
+        padding: 2.2rem 1.8rem;
+    }
+
+    .hero-headline {
+        font-size: 1.8rem;
+    }
+
+    .bio-section,
+    .properties-section,
+    .info-section {
+        padding: 3.5rem 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.9rem;
+    }
+
+    .properties-grid {
+        grid-template-columns: 1fr;
+        gap: 2.2rem;
+    }
+
+    .property-image {
+        height: 260px;
+    }
+
+    .contact-details {
+        padding: 2rem 1.5rem;
+    }
+}
+
+/* TABLETS - LANDSCAPE & SMALL DESKTOPS (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .navbar-container {
+        padding: 1.3rem 2rem;
+        gap: 1.5rem;
+    }
+
+    .navbar-logo h1 {
+        font-size: 1.2rem;
+    }
+
+    .navbar-menu {
+        gap: 1.3rem;
+    }
+
+    .cta-button {
+        padding: 0.8rem 1.7rem;
+        font-size: 0.82rem;
+    }
+
+    .hero-overlay {
+        left: 2rem;
+        max-width: 420px;
+    }
+
+    .hero-headline {
+        font-size: 2rem;
+    }
+
+    .bio-section,
+    .properties-section,
+    .info-section {
+        padding: 4rem 2rem;
+    }
+
+    .bio-container {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .bio-title {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .properties-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .contact-form {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .form-input {
+        flex: 1;
+        min-width: 200px;
+    }
+
+    .contact-details {
+        padding: 2.5rem 2rem;
+    }
+}
+
+/* DESKTOPS & LARGE TABLETS (1024px - 1365px) */
+@media (min-width: 1024px) and (max-width: 1365px) {
+    .navbar-container {
+        padding: 1.4rem 2.5rem;
         gap: 2rem;
     }
 
@@ -608,121 +1167,95 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .bio-container {
-        flex-direction: column;
+        flex-direction: row;
         gap: 3rem;
     }
 
+    .bio-title {
+        font-size: 2.1rem;
+    }
+
+    .properties-section {
+        padding: 4.5rem 2.5rem;
+    }
+
     .properties-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .navbar-container {
-        flex-wrap: wrap;
-        gap: 1.5rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
     }
 
-    .navbar-logo h1 {
-        font-size: 1.1rem;
-    }
-
-    .navbar-menu {
-        order: 3;
-        width: 100%;
-        flex-direction: column;
-        gap: 1.5rem;
-        text-align: center;
-        margin-top: 1rem;
-    }
-
-    .hero-overlay {
-        left: 1.5rem;
-        right: 1.5rem;
-        max-width: none;
-        top: 50%;
-    }
-
-    .hero-card {
-        padding: 2.5rem 2rem;
-    }
-
-    .hero-headline {
-        font-size: 1.8rem;
-    }
-
-    .properties-section,
-    .bio-section,
-    .info-section {
-        padding: 4rem 1.5rem;
+    .section-title {
+        font-size: 2.2rem;
     }
 
     .contact-form {
-        flex-direction: column;
+        flex-direction: row;
+        gap: 1rem;
     }
 
-    .form-input,
-    .form-submit {
-        max-width: none;
-        width: 100%;
+    .form-input {
+        flex: 1;
+        min-width: 250px;
     }
 }
 
-@media (max-width: 480px) {
-    .navbar-logo h1 {
-        font-size: 1rem;
+/* STANDARD DESKTOP (1366px - 1919px) */
+@media (min-width: 1366px) and (max-width: 1919px) {
+    /* Uses default styles */
+}
+
+/* LARGE DESKTOP & 4K (1920px and above) */
+@media (min-width: 1920px) {
+    .navbar-container {
+        max-width: 1600px;
+        margin: 0 auto;
+        padding: 1.8rem 4rem;
     }
 
-    .contact-details {
-        padding: 2rem 1.5rem;
-        margin: 2rem 0 1.5rem 0;
-    }
-
-    .contact-details h4 {
-        font-size: 1.1rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .contact-details p {
-        font-size: 0.95rem;
-        padding: 0.75rem 0;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-    }
-
-    .contact-details strong {
-        min-width: auto;
+    .hero-section {
+        height: 90vh;
     }
 
     .hero-overlay {
-        left: 1rem;
-        right: 1rem;
+        left: 10%;
+        max-width: 600px;
     }
 
     .hero-card {
-        padding: 2rem 1.5rem;
+        padding: 3.5rem 3rem;
     }
 
     .hero-headline {
-        font-size: 1.5rem;
+        font-size: 3.5rem;
     }
 
-    .hero-description {
-        font-size: 0.9rem;
+    .bio-section,
+    .properties-section,
+    .info-section {
+        padding: 6rem 4rem;
     }
 
-    .section-title,
-    .bio-title {
-        font-size: 1.8rem;
+    .bio-container,
+    .properties-container,
+    .info-container {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    .section-title {
+        font-size: 2.8rem;
+    }
+
+    .properties-grid {
+        gap: 3.5rem;
+    }
+
+    .contact-details {
+        max-width: 1000px;
+        padding: 3.5rem 3rem;
     }
 
     .footer {
-        padding: 3rem 1.5rem;
-    }
-
-    .footer h3 {
-        font-size: 1.5rem;
+        padding: 6rem 4rem;
     }
 }

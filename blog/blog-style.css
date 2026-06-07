@@ -267,30 +267,201 @@
 }
 
 /* ================================================================
-   RESPONSIVE DESIGN
+   RESPONSIVE DESIGN - BLOG PAGES
    ================================================================ */
 
-@media (max-width: 1024px) {
+/* EXTRA SMALL PHONES (320px - 374px) */
+@media (max-width: 374px) {
+    .blog-header {
+        padding: 2rem 0.8rem;
+    }
+
     .blog-header-content h1 {
-        font-size: 2.2rem;
+        font-size: 1.3rem;
+    }
+
+    .blog-header-content p {
+        font-size: 0.8rem;
+    }
+
+    .blog-section {
+        padding: 2rem 0.8rem;
     }
 
     .blog-grid {
-        gap: 2.5rem;
+        gap: 1.2rem;
+    }
+
+    .blog-post-card {
+        padding: 1.5rem;
+    }
+
+    .blog-date {
+        font-size: 0.75rem;
+    }
+
+    .blog-category {
+        font-size: 0.65rem;
+        padding: 0.3rem 0.6rem;
+    }
+
+    .blog-post-title {
+        font-size: 1.1rem;
+    }
+
+    .blog-excerpt {
+        font-size: 0.85rem;
+    }
+
+    .blog-post-container {
+        padding: 1.5rem 0.8rem;
+    }
+
+    .blog-back-link {
+        font-size: 0.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .blog-post-header h1 {
+        font-size: 1.3rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .blog-post-meta {
+        font-size: 0.8rem;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .blog-post-content {
+        padding: 1.5rem;
+    }
+
+    .blog-post-content p {
+        font-size: 0.85rem;
+    }
+
+    .blog-post-content h2 {
+        font-size: 1.2rem;
+        margin-top: 1.5rem;
+    }
+
+    .blog-post-content h3 {
+        font-size: 1rem;
+    }
+
+    .blog-post-content ul,
+    .blog-post-content ol {
+        margin: 1rem 0 1rem 1.5rem;
+        font-size: 0.85rem;
+    }
+
+    .blog-related h3 {
+        font-size: 1.1rem;
+    }
+
+    .blog-related-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .blog-related-item {
+        padding: 1rem;
+    }
+
+    .blog-related-item a {
+        font-size: 0.9rem;
     }
 }
 
-@media (max-width: 768px) {
+/* SMALL PHONES (375px - 479px) */
+@media (min-width: 375px) and (max-width: 479px) {
     .blog-header {
-        padding: 4rem 1.5rem;
+        padding: 2.5rem 1rem;
+    }
+
+    .blog-header-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .blog-header-content p {
+        font-size: 0.85rem;
+    }
+
+    .blog-section {
+        padding: 2.5rem 1rem;
+    }
+
+    .blog-grid {
+        gap: 1.5rem;
+    }
+
+    .blog-post-card {
+        padding: 1.8rem;
+    }
+
+    .blog-date {
+        font-size: 0.8rem;
+    }
+
+    .blog-post-title {
+        font-size: 1.3rem;
+    }
+
+    .blog-excerpt {
+        font-size: 0.88rem;
+    }
+
+    .blog-post-container {
+        padding: 2rem 1rem;
+    }
+
+    .blog-post-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .blog-post-meta {
+        font-size: 0.85rem;
+    }
+
+    .blog-post-content {
+        padding: 1.8rem;
+    }
+
+    .blog-post-content p {
+        font-size: 0.88rem;
+    }
+
+    .blog-post-content h2 {
+        font-size: 1.4rem;
+    }
+
+    .blog-related h3 {
+        font-size: 1.3rem;
+    }
+
+    .blog-related-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* TABLETS - PORTRAIT (480px - 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+    .blog-header {
+        padding: 3.5rem 1.5rem;
     }
 
     .blog-header-content h1 {
         font-size: 1.8rem;
     }
 
+    .blog-header-content p {
+        font-size: 0.95rem;
+    }
+
     .blog-section {
-        padding: 4rem 1.5rem;
+        padding: 3.5rem 1.5rem;
     }
 
     .blog-grid {
@@ -298,8 +469,18 @@
         gap: 2rem;
     }
 
+    .blog-post-card {
+        padding: 2rem;
+    }
+
+    .blog-post-title {
+        font-size: 1.5rem;
+    }
+
     .blog-post-container {
         padding: 3rem 1.5rem;
+        max-width: 800px;
+        margin: 0 auto;
     }
 
     .blog-post-header h1 {
@@ -307,10 +488,128 @@
     }
 
     .blog-post-content {
-        padding: 2rem;
+        padding: 2.2rem;
+    }
+
+    .blog-post-content p {
+        font-size: 0.95rem;
+    }
+
+    .blog-post-content h2 {
+        font-size: 1.6rem;
     }
 
     .blog-related-grid {
         grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+/* TABLETS - LANDSCAPE (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .blog-header {
+        padding: 4rem 2rem;
+    }
+
+    .blog-header-content h1 {
+        font-size: 2rem;
+    }
+
+    .blog-section {
+        padding: 4rem 2rem;
+    }
+
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+    }
+
+    .blog-post-container {
+        padding: 3.5rem 2rem;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .blog-post-header h1 {
+        font-size: 2rem;
+    }
+
+    .blog-post-content {
+        padding: 2.5rem;
+    }
+
+    .blog-related-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+/* DESKTOPS (1024px - 1365px) */
+@media (min-width: 1024px) and (max-width: 1365px) {
+    .blog-header-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .blog-grid {
+        gap: 2.5rem;
+    }
+
+    .blog-post-container {
+        max-width: 850px;
+        margin: 0 auto;
+    }
+}
+
+/* LARGE DESKTOP & 4K (1920px and above) */
+@media (min-width: 1920px) {
+    .blog-header {
+        padding: 7rem 4rem;
+    }
+
+    .blog-header-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .blog-header-content p {
+        font-size: 1.3rem;
+    }
+
+    .blog-section {
+        padding: 6rem 4rem;
+    }
+
+    .blog-container {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    .blog-grid {
+        gap: 3.5rem;
+    }
+
+    .blog-post-title {
+        font-size: 2rem;
+    }
+
+    .blog-post-container {
+        padding: 4rem 4rem;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .blog-post-header h1 {
+        font-size: 3rem;
+    }
+
+    .blog-post-content {
+        padding: 3.5rem;
+    }
+
+    .blog-post-content h2 {
+        font-size: 2rem;
+    }
+
+    .blog-related-grid {
+        gap: 3rem;
     }
 }
