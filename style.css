@@ -1,0 +1,728 @@
+/* ================================================================
+   LUXURY REAL ESTATE LANDING PAGE - STYLESHEET
+   ================================================================
+   Color Palette:
+   - Primary Background: Soft warm cream (#F5F1E8)
+   - Card/Overlay Background: Deep muted charcoal (#2B3E47)
+   - Primary Text: Crisp white (#FFFFFF)
+   - Secondary Text: Soft silver (#E8E8E8)
+   - Accent: Deep forest slate (#3A4B4E)
+   ================================================================ */
+
+/* Global Reset & Typography Foundation */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F5F1E8;
+    color: #2B3E47;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+/* ================================================================
+   NAVIGATION BAR
+   ================================================================ */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(245, 241, 232, 0.98);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+
+/* Navbar Logo: Serif, prominent agent name with brokerage underneath */
+.navbar-logo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.navbar-logo h1 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: #2B3E47;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.navbar-brokerage {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: #3A4B4E;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* Navbar Menu: Flexbox with generous spacing, sans-serif navigation */
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+    flex: 1;
+    justify-content: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #2B3E47;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    padding-bottom: 0.25rem;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover {
+    color: #3A4B4E;
+    border-bottom-color: #3A4B4E;
+}
+
+/* CTA Button: Pill-shaped with deep charcoal background */
+.cta-button {
+    padding: 0.75rem 1.75rem;
+    background-color: #2B3E47;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.cta-button:hover {
+    background-color: #3A4B4E;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(43, 62, 71, 0.15);
+}
+
+/* ================================================================
+   HERO SHOWCASE SECTION
+   ================================================================
+   The hero uses absolute positioning to layer the text card over
+   the background image. The .hero-section container establishes
+   position: relative as the containing block for absolute children.
+   ================================================================ */
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Background Image: Fills entire hero container with cover sizing */
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Overlay Container: Positions content on top of background image */
+.hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    z-index: 10;
+    max-width: 550px;
+    animation: slideInFromLeft 0.8s ease-out;
+}
+
+/* Hero Card: The floating text block with high contrast */
+.hero-card {
+    background-color: rgba(43, 62, 71, 0.92);
+    padding: 3rem 2.5rem;
+    border-radius: 8px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+.hero-greeting {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: #E8E8E8;
+    font-size: 0.95rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+    text-transform: lowercase;
+}
+
+.hero-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    color: #FFFFFF;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero-description {
+    color: #E8E8E8;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    letter-spacing: 0.02em;
+    line-height: 1.7;
+}
+
+.hero-cta {
+    padding: 0.9rem 2rem;
+    background-color: #FFFFFF;
+    color: #2B3E47;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hero-cta:hover {
+    background-color: #E8E8E8;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Animation: Slide in from left for hero card */
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px) translateY(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) translateY(-50%);
+    }
+}
+
+/* ================================================================
+   BIO SECTION (Two-Column Split)
+   ================================================================
+   Uses flexbox with two equal-width columns. The image column
+   uses align-items: center to vertically center the image.
+   ================================================================ */
+
+.bio-section {
+    background-color: #FFFFFF;
+    padding: 6rem 3rem;
+}
+
+.bio-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+
+/* Left Column: Image */
+.bio-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+.agent-photo {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 12px 28px rgba(43, 62, 71, 0.12);
+    object-fit: cover;
+}
+
+/* Right Column: Bio Text */
+.bio-text {
+    flex: 1;
+}
+
+.bio-title {
+    font-size: 2.5rem;
+    color: #2B3E47;
+    margin-bottom: 1rem;
+}
+
+.bio-subtitle {
+    font-size: 1.2rem;
+    color: #3A4B4E;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.bio-body {
+    color: #555555;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    letter-spacing: 0.01em;
+}
+
+/* ================================================================
+   FEATURED PROPERTIES SECTION (Grid)
+   ================================================================
+   Uses CSS Grid with 2 columns. Each property card uses flexbox
+   for vertical stacking of image and details.
+   ================================================================ */
+
+.properties-section {
+    background-color: #F5F1E8;
+    padding: 6rem 3rem;
+}
+
+.properties-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #2B3E47;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+/* Grid Layout: 2 columns with responsive gap */
+.properties-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+}
+
+/* Property Card: Flexbox column for stacking */
+.property-card {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(43, 62, 71, 0.08);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.property-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 36px rgba(43, 62, 71, 0.15);
+}
+
+/* Property Image Container: Maintains aspect ratio */
+.property-image {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    background-color: #E8E8E8;
+}
+
+.listing-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.property-card:hover .listing-photo {
+    transform: scale(1.05);
+}
+
+/* Property Details: Padding and text hierarchy */
+.property-details {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.property-location {
+    font-size: 1.5rem;
+    color: #2B3E47;
+    margin-bottom: 0.5rem;
+}
+
+.property-price {
+    font-size: 1.3rem;
+    color: #3A4B4E;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-bottom: 1rem;
+}
+
+.property-snippet {
+    color: #666666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ================================================================
+   FOOTER SECTION
+   ================================================================
+   Uses flexbox for vertical centering and alignment.
+   ================================================================ */
+
+.footer {
+    background-color: #2B3E47;
+    color: #FFFFFF;
+    padding: 5rem 3rem;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #FFFFFF;
+}
+
+/* Contact Form: Flexbox row with gap */
+.contact-form {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.form-input {
+    padding: 0.9rem 1.5rem;
+    border: 2px solid #E8E8E8;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    color: #2B3E47;
+    background-color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #FFFFFF;
+}
+
+.form-submit {
+    padding: 0.9rem 2.5rem;
+    background-color: #FFFFFF;
+    color: #2B3E47;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.form-submit:hover {
+    background-color: #E8E8E8;
+    transform: translateY(-2px);
+}
+
+.contact-details {
+    background-color: rgba(43, 62, 71, 0.3);
+    padding: 3rem 2.5rem;
+    border-radius: 8px;
+    margin: 3rem 0 2rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-details h4 {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    color: #FFFFFF;
+    letter-spacing: 0.05em;
+}
+
+.contact-details p {
+    color: #E8E8E8;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin: 0;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact-details p:last-of-type {
+    border-bottom: none;
+}
+
+.contact-details strong {
+    color: #FFFFFF;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    width: 140px;
+    flex-shrink: 0;
+}
+
+.contact-details a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: right;
+}
+
+.contact-details a:hover {
+    color: #E8E8E8;
+}
+
+.footer-text {
+    color: #E8E8E8;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+}
+
+/* ================================================================
+   BUY, REFER & BLOG INFO SECTIONS
+   ================================================================ */
+
+.info-section {
+    padding: 5rem 3rem;
+    text-align: center;
+}
+
+.info-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.buy-section {
+    background-color: #FFFFFF;
+}
+
+.refer-section {
+    background-color: #F5F1E8;
+}
+
+.blog-section {
+    background-color: #FFFFFF;
+}
+
+.section-description {
+    font-size: 1.05rem;
+    color: #555555;
+    line-height: 1.8;
+    margin: 2rem 0;
+    letter-spacing: 0.01em;
+}
+
+.info-cta {
+    padding: 0.85rem 2.5rem;
+    background-color: #2B3E47;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+    margin-top: 1.5rem;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.info-cta:hover {
+    background-color: #3A4B4E;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(43, 62, 71, 0.15);
+}
+
+/* ================================================================
+   RESPONSIVE BREAKPOINTS
+   ================================================================ */
+
+@media (max-width: 1024px) {
+    .navbar-container {
+        padding: 1.25rem 2rem;
+        gap: 2rem;
+    }
+
+    .navbar-menu {
+        gap: 2rem;
+    }
+
+    .hero-overlay {
+        left: 5%;
+        max-width: 450px;
+    }
+
+    .hero-headline {
+        font-size: 2.2rem;
+    }
+
+    .bio-container {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .properties-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .navbar-logo h1 {
+        font-size: 1.1rem;
+    }
+
+    .navbar-menu {
+        order: 3;
+        width: 100%;
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .hero-overlay {
+        left: 1.5rem;
+        right: 1.5rem;
+        max-width: none;
+        top: 50%;
+    }
+
+    .hero-card {
+        padding: 2.5rem 2rem;
+    }
+
+    .hero-headline {
+        font-size: 1.8rem;
+    }
+
+    .properties-section,
+    .bio-section,
+    .info-section {
+        padding: 4rem 1.5rem;
+    }
+
+    .contact-form {
+        flex-direction: column;
+    }
+
+    .form-input,
+    .form-submit {
+        max-width: none;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-logo h1 {
+        font-size: 1rem;
+    }
+
+    .contact-details {
+        padding: 2rem 1.5rem;
+        margin: 2rem 0 1.5rem 0;
+    }
+
+    .contact-details h4 {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-details p {
+        font-size: 0.95rem;
+        padding: 0.75rem 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .contact-details strong {
+        min-width: auto;
+    }
+
+    .hero-overlay {
+        left: 1rem;
+        right: 1rem;
+    }
+
+    .hero-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .hero-headline {
+        font-size: 1.5rem;
+    }
+
+    .hero-description {
+        font-size: 0.9rem;
+    }
+
+    .section-title,
+    .bio-title {
+        font-size: 1.8rem;
+    }
+
+    .footer {
+        padding: 3rem 1.5rem;
+    }
+
+    .footer h3 {
+        font-size: 1.5rem;
+    }
+}
