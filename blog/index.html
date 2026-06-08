@@ -6,7 +6,7 @@
     <title>Real Estate Blog | Mystie Schmitz | Axen Realty</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="blog-style.css">
 </head>
@@ -18,14 +18,26 @@
                 <h1><a href="../index.html" style="text-decoration: none; color: #2B3E47;">Mystie Schmitz</a></h1>
                 <p class="navbar-brokerage">Axen Realty</p>
             </div>
-            <ul class="navbar-menu">
+
+            <!-- Hamburger Menu Button (Mobile Only) -->
+            <button class="hamburger-menu" id="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Navigation Menu -->
+            <ul class="navbar-menu" id="navbar-menu">
                 <li><a href="../index.html#home" class="nav-link">Home</a></li>
                 <li><a href="../index.html#about" class="nav-link">About</a></li>
                 <li><a href="../index.html#buy" class="nav-link">Buy</a></li>
                 <li><a href="../index.html#sell" class="nav-link">Sell</a></li>
                 <li><a href="../index.html#refer" class="nav-link">Refer</a></li>
                 <li><a href="index.html" class="nav-link active">Blog</a></li>
+                <li class="mobile-cta"><a href="../index.html#contact" class="nav-link">SCHEDULE A CALL</a></li>
             </ul>
+
+            <!-- Desktop CTA Button -->
             <button class="cta-button">SCHEDULE A CALL</button>
         </div>
     </nav>

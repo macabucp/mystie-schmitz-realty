@@ -13,6 +13,35 @@ const navbar = document.querySelector('.navbar');
 const navLinks = document.querySelectorAll('.nav-link');
 const contactForm = document.getElementById('contact-form');
 const ctaButtons = document.querySelectorAll('.cta-button, .hero-cta');
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('navbar-menu');
+
+// ================================================================
+// HAMBURGER MENU FUNCTIONALITY
+// ================================================================
+if (hamburger) {
+    hamburger.addEventListener('click', function () {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        console.log('→ Mobile menu toggled');
+    });
+
+    // Close menu when a link is clicked
+    navLinks.forEach((link) => {
+        link.addEventListener('click', function () {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function (e) {
+        if (!e.target.closest('.navbar-container')) {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }
+    });
+}
 
 // ================================================================
 // SCROLL TRACKING: Highlight active nav link based on scroll position

@@ -56,28 +56,35 @@ h1, h2, h3, h4, h5, h6 {
     gap: 3rem;
 }
 
-/* Navbar Logo: Serif, prominent agent name with brokerage underneath */
+/* Navbar Logo: Luxury serif branding matching CARLILE GROUP aesthetic */
 .navbar-logo {
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
+    gap: 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #D4D0C8;
+    text-align: center;
 }
 
 .navbar-logo h1 {
-    font-size: 1.4rem;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    color: #2B3E47;
+    font-size: 1.35rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    color: #2b302c;
     font-family: 'Cormorant Garamond', serif;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1;
 }
 
 .navbar-brokerage {
-    font-size: 0.75rem;
-    letter-spacing: 0.1em;
-    color: #3A4B4E;
-    font-weight: 500;
+    font-size: 0.5rem;
+    letter-spacing: 0.25em;
+    color: #2b302c;
+    font-weight: 400;
     text-transform: uppercase;
-    margin: 0;
+    margin: -3px 0 0 0;
+    font-family: 'Cormorant Garamond', serif;
 }
 
 /* Navbar Menu: Flexbox with generous spacing, sans-serif navigation */
@@ -87,6 +94,54 @@ h1, h2, h3, h4, h5, h6 {
     gap: 3rem;
     flex: 1;
     justify-content: center;
+}
+
+/* Hamburger Menu Button (Hidden on Desktop) */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    gap: 0.35rem;
+    padding: 0.5rem;
+    z-index: 1001;
+}
+
+.hamburger-menu span {
+    width: 24px;
+    height: 2.5px;
+    background-color: #2B3E47;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Mobile CTA Link in Menu */
+.mobile-cta {
+    display: none;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-cta .nav-link {
+    background-color: #2B3E47;
+    color: #FFFFFF;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    display: block;
+    text-align: center;
 }
 
 .nav-link {
@@ -177,21 +232,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-greeting {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
+    font-family: 'Monsieur La Doulaise', cursive;
+    font-weight: 400;
+    font-style: normal;
     color: #E8E8E8;
-    font-size: 0.95rem;
-    letter-spacing: 0.1em;
-    margin-bottom: 0.5rem;
+    font-size: 3.2rem;
+    letter-spacing: 0.02em;
+    margin-bottom: 1.5rem;
     text-transform: lowercase;
+    line-height: 1;
 }
 
 .hero-headline {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 3rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 600;
     color: #FFFFFF;
     margin-bottom: 1.5rem;
-    line-height: 1.2;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
 }
 
 .hero-description {
@@ -329,6 +388,43 @@ h1, h2, h3, h4, h5, h6 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.properties-cta {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(43, 62, 71, 0.1);
+}
+
+.properties-cta p {
+    color: #666666;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+}
+
+.view-all-button {
+    display: inline-block;
+    padding: 0.9rem 2.5rem;
+    background-color: #2B3E47;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.view-all-button:hover {
+    background-color: #3A4B4E;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(43, 62, 71, 0.15);
 }
 
 /* Property Card: Flexbox column for stacking */
@@ -595,7 +691,6 @@ h1, h2, h3, h4, h5, h6 {
     .navbar-container {
         padding: 0.8rem 0.8rem;
         gap: 0.5rem;
-        flex-wrap: wrap;
     }
 
     .navbar-logo h1 {
@@ -606,28 +701,64 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 0.65rem;
     }
 
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .hamburger-menu span {
+        width: 20px;
+        height: 2px;
+    }
+
     .navbar-menu {
-        order: 3;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: rgba(245, 241, 232, 0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        gap: 0;
         width: 100%;
-        flex-direction: row;
-        gap: 0.4rem;
-        font-size: 0.7rem;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin-top: 0.5rem;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        padding: 0;
+        list-style: none;
+    }
+
+    .navbar-menu.active {
+        max-height: 500px;
+        padding: 1rem 0;
+    }
+
+    .navbar-menu li {
+        text-align: center;
+        border-bottom: 1px solid rgba(43, 62, 71, 0.1);
     }
 
     .nav-link {
-        font-size: 0.7rem;
-        padding: 0.3rem;
+        font-size: 0.8rem;
+        padding: 1rem;
+        display: block;
+        letter-spacing: 0.1em;
+    }
+
+    .mobile-cta {
+        display: block;
+    }
+
+    .mobile-cta .nav-link {
+        font-size: 0.75rem;
+        background-color: #2B3E47;
+        color: #FFFFFF;
+        margin: 0.5rem 1rem;
+        border-radius: 4px;
+        padding: 0.7rem 1.2rem;
     }
 
     .cta-button {
-        padding: 0.6rem 0.8rem;
-        font-size: 0.65rem;
-        order: 4;
-        width: 100%;
-        white-space: normal;
+        display: none;
     }
 
     .hero-section {
@@ -644,11 +775,11 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .hero-greeting {
-        font-size: 0.75rem;
+        font-size: 2.2rem;
     }
 
     .hero-headline {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         line-height: 1.3;
     }
 
@@ -770,7 +901,6 @@ h1, h2, h3, h4, h5, h6 {
     .navbar-container {
         padding: 1rem 1rem;
         gap: 0.8rem;
-        flex-wrap: wrap;
     }
 
     .navbar-logo h1 {
@@ -781,27 +911,57 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 0.7rem;
     }
 
+    .hamburger-menu {
+        display: flex;
+    }
+
     .navbar-menu {
-        order: 3;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: rgba(245, 241, 232, 0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        gap: 0;
         width: 100%;
-        flex-direction: row;
-        gap: 0.5rem;
-        font-size: 0.75rem;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin-top: 0.5rem;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        padding: 0;
+        list-style: none;
+    }
+
+    .navbar-menu.active {
+        max-height: 500px;
+        padding: 1rem 0;
+    }
+
+    .navbar-menu li {
+        text-align: center;
+        border-bottom: 1px solid rgba(43, 62, 71, 0.1);
     }
 
     .nav-link {
-        font-size: 0.75rem;
-        padding: 0.35rem;
+        font-size: 0.8rem;
+        padding: 1rem;
+        display: block;
+    }
+
+    .mobile-cta {
+        display: block;
+    }
+
+    .mobile-cta .nav-link {
+        background-color: #2B3E47;
+        color: #FFFFFF;
+        margin: 0.5rem 1rem;
+        border-radius: 4px;
+        padding: 0.7rem 1.2rem;
     }
 
     .cta-button {
-        padding: 0.65rem 1rem;
-        font-size: 0.72rem;
-        order: 4;
-        width: 100%;
+        display: none;
     }
 
     .hero-section {
@@ -818,7 +978,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .hero-greeting {
-        font-size: 0.8rem;
+        font-size: 2.8rem;
     }
 
     .hero-headline {
@@ -949,14 +1109,56 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 1.05rem;
     }
 
+    .hamburger-menu {
+        display: flex;
+    }
+
     .navbar-menu {
-        gap: 0.8rem;
-        font-size: 0.8rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: rgba(245, 241, 232, 0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        padding: 0;
+    }
+
+    .navbar-menu.active {
+        max-height: 500px;
+        padding: 1rem 0;
+    }
+
+    .navbar-menu li {
+        text-align: center;
+        border-bottom: 1px solid rgba(43, 62, 71, 0.1);
+    }
+
+    .nav-link {
+        font-size: 0.85rem;
+        padding: 1rem;
+        display: block;
+    }
+
+    .mobile-cta {
+        display: block;
+    }
+
+    .mobile-cta .nav-link {
+        background-color: #2B3E47;
+        color: #FFFFFF;
+        margin: 0.5rem 1rem;
+        border-radius: 4px;
+        padding: 0.75rem 1.4rem;
     }
 
     .cta-button {
-        padding: 0.7rem 1.2rem;
-        font-size: 0.75rem;
+        display: none;
     }
 
     .hero-section {
@@ -1028,13 +1230,56 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 1.1rem;
     }
 
+    .hamburger-menu {
+        display: flex;
+    }
+
     .navbar-menu {
-        gap: 1rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: rgba(245, 241, 232, 0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        padding: 0;
+    }
+
+    .navbar-menu.active {
+        max-height: 500px;
+        padding: 1rem 0;
+    }
+
+    .navbar-menu li {
+        text-align: center;
+        border-bottom: 1px solid rgba(43, 62, 71, 0.1);
+    }
+
+    .nav-link {
+        font-size: 0.9rem;
+        padding: 1rem;
+        display: block;
+    }
+
+    .mobile-cta {
+        display: block;
+    }
+
+    .mobile-cta .nav-link {
+        background-color: #2B3E47;
+        color: #FFFFFF;
+        margin: 0.5rem 1.5rem;
+        border-radius: 4px;
+        padding: 0.8rem 1.5rem;
     }
 
     .cta-button {
-        padding: 0.75rem 1.5rem;
-        font-size: 0.8rem;
+        display: none;
     }
 
     .hero-section {
@@ -1083,17 +1328,49 @@ h1, h2, h3, h4, h5, h6 {
     .navbar-container {
         padding: 1.3rem 2rem;
         gap: 1.5rem;
+        flex-wrap: nowrap;
     }
 
     .navbar-logo h1 {
         font-size: 1.2rem;
     }
 
+    .hamburger-menu {
+        display: none;
+    }
+
     .navbar-menu {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        background-color: transparent;
+        backdrop-filter: none;
+        flex-direction: row;
         gap: 1.3rem;
+        width: auto;
+        max-height: none;
+        overflow: visible;
+        padding: 0;
+    }
+
+    .navbar-menu li {
+        text-align: center;
+        border-bottom: none;
+    }
+
+    .nav-link {
+        font-size: 0.9rem;
+        padding: 0;
+        display: inline;
+    }
+
+    .mobile-cta {
+        display: none;
     }
 
     .cta-button {
+        display: block;
         padding: 0.8rem 1.7rem;
         font-size: 0.82rem;
     }

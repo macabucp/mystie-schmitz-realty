@@ -6,7 +6,7 @@
     <title>Mystie Schmitz | Real Estate Agent | Axen Realty | Florida Panhandle</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,14 +17,27 @@
                 <h1>Mystie Schmitz</h1>
                 <p class="navbar-brokerage">Axen Realty</p>
             </div>
-            <ul class="navbar-menu">
+
+            <!-- Hamburger Menu Button (Mobile Only) -->
+            <button class="hamburger-menu" id="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Navigation Menu -->
+            <ul class="navbar-menu" id="navbar-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#buy" class="nav-link">Buy</a></li>
                 <li><a href="#sell" class="nav-link">Sell</a></li>
+                <li><a href="listings.html" class="nav-link">Featured Homes</a></li>
                 <li><a href="#refer" class="nav-link">Refer</a></li>
                 <li><a href="blog/index.html" class="nav-link">Blog</a></li>
+                <li class="mobile-cta"><a href="#contact" class="nav-link">SCHEDULE A CALL</a></li>
             </ul>
+
+            <!-- Desktop CTA Button -->
             <button class="cta-button">SCHEDULE A CALL</button>
         </div>
     </nav>
@@ -82,25 +95,25 @@
         </div>
     </section>
 
-    <!-- Featured Properties Grid -->
+    <!-- Featured Homes Grid -->
     <section id="sell" class="properties-section">
         <div class="properties-container">
-            <h2 class="section-title">Featured Listings</h2>
+            <h2 class="section-title">Featured Homes</h2>
 
             <div class="properties-grid">
                 <!-- Property Card 1 -->
                 <article class="property-card">
                     <div class="property-image">
                         <img
-                            src="images/home-listing-1-placeholder.jpg"
-                            alt="Luxury home listing one with contemporary design"
+                            src="images/broadview.png"
+                            alt="3308 Broadview Circle, Crestview FL"
                             class="listing-photo"
                         >
                     </div>
                     <div class="property-details">
-                        <h4 class="property-location">Coastal Heights</h4>
-                        <p class="property-price">$2,450,000</p>
-                        <p class="property-snippet">Stunning oceanfront estate with panoramic views, 5 beds, 4.5 baths.</p>
+                        <h4 class="property-location">3308 Broadview Circle</h4>
+                        <p class="property-price">$895,000</p>
+                        <p class="property-snippet">Luxury estate with elegant architecture, expansive grounds, and resort-style amenities.</p>
                     </div>
                 </article>
 
@@ -108,17 +121,22 @@
                 <article class="property-card">
                     <div class="property-image">
                         <img
-                            src="images/home-listing-2-placeholder.jpg"
-                            alt="Luxury home listing two with elegant interiors"
+                            src="images/citrine.png"
+                            alt="3362 Citrine Circle, Crestview FL"
                             class="listing-photo"
                         >
                     </div>
                     <div class="property-details">
-                        <h4 class="property-location">Downtown Penthouse</h4>
-                        <p class="property-price">$3,100,000</p>
-                        <p class="property-snippet">Modern luxury in the heart of the city. 4 beds, 3.5 baths, floor-to-ceiling glass.</p>
+                        <h4 class="property-location">3362 Citrine Circle</h4>
+                        <p class="property-price">$485,000</p>
+                        <p class="property-snippet">Spacious 5BR/4BA home with new roof, media room, brick patio with fireplace, and mature trees.</p>
                     </div>
                 </article>
+            </div>
+
+            <div class="properties-cta">
+                <p>Discover more exceptional properties</p>
+                <a href="listings.html" class="view-all-button">View All Featured Homes →</a>
             </div>
         </div>
     </section>
